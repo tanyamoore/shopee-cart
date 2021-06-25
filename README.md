@@ -38,7 +38,7 @@ Please see the Attached `gif` for the Design
   * Price of the Product
   * Quantity
 * On Each Product in the Cart it should have "Remove from Cart" button
-*. When I click the "Remove from Cart" button it should 
+* When I click the "Remove from Cart" button it should 
   * Decrement number of quantity of the Product
   * Decrement the total number of quantity in the header
   * When the quantity of each Product become "0" zero it will remove from list
