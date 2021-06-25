@@ -46,6 +46,7 @@ Please see the Attached `gif` for the Design
 
 
 ## Notes
+* If you have questions and concerns you can create discussion, Go to "Discussion" tab then create New
 * Data should only in the client side you can use `localStorage`, `Singleton variable`, or `state management` library
 * Don't over Architect it
 
