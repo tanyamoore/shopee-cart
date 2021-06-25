@@ -46,5 +46,5 @@ Please see the Attached `gif` for the Design
 
 ## Notes
 * Data should only in the client side you can use `localStorage`, `Singleton variable`, or `state management` library
-* Don't over Architecture 
+* Don't over Architect it
 
