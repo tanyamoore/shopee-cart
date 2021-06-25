@@ -14,9 +14,10 @@
 * Github account
 
 ## Getting Started
-* clone the repositoty
-* create a new branch `git checkout -b feature/<any-feature-you-want>`
+* fork the repository
+* create a feature branch `git checkout -b feature/<any-feature-you-want>`
 * update this `README` file to include the installation guide
+* create a Pull Request to this repository
 
 ## Installation
 * `You Installation Guide Here`
