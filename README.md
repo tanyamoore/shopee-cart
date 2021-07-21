@@ -10,7 +10,7 @@
 
 ## Requirements
 * NodeJS 14.x or higher
-* Angular 11.x or higher / Latest AngularJS
+* Angular 11.x or higher / Latest AngularJS, VueJS or React
 * Github account
 
 ## Getting Started
