@@ -1,0 +1,29 @@
+.product{
+  height: 70px;
+  margin: 20px 50px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px black solid;
+
+  &_title {
+    font-weight: bold;
+  }
+
+  &_button {
+    background-color: #2c4051;
+    color: #fefefc;
+    height: 40px;
+    width: 135px;
+    &:hover {
+      background-color: #fefefc;
+      color: #2c4051;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .product{
+    margin: 10px;
+  }
+}

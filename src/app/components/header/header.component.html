@@ -1,0 +1,20 @@
+<header class="header">
+  <a
+    class="header_link"
+    (click)="onSelectItem('product')"
+    [class.header_link-active]="activeTab === 'product'"
+    [routerLink]="['/product-list']"
+  >
+    Products
+  </a>
+  <a
+    class="header_link"
+    (click)="onSelectItem('cart')"
+    [class.header_link-active]="activeTab === 'cart'"
+    [routerLink]="['/cart']"
+  >
+    Cart
+    <span>({{ productsCounter | async }})</span>
+  </a>
+</header>
+

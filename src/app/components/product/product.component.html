@@ -1,0 +1,17 @@
+<!--<li class="product">-->
+<!--    <span>-->
+<!--      <span class="product_title">{{ product.name }}</span> - {{ product.price | number: '1.2' }}-->
+<!--    </span>-->
+<!--  <button class="product_button" (click)="addToCart(product)">Add to cart</button>-->
+<!--</li>-->
+
+<li class="product">
+    <span>
+      <span class="product_title">
+        {{ product.name }}
+      </span>- {{ product.price }}
+      <span *ngIf="cart && product.counter">({{ product.counter }})</span>
+    </span>
+  <button *ngIf="!cart" class="product_button" (click)="addToCart(product)">Add to cart</button>
+  <button *ngIf="cart" class="product_button" (click)="deleteProduct(product)">Remove from card</button>
+</li>

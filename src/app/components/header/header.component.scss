@@ -1,0 +1,18 @@
+.header{
+  background-color: #1bae7c;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &_link {
+    background-color: #1bae7c;
+    text-decoration: none;
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: black;
+    &-active {
+      background-color: #fefefc;
+    }
+  }
+}

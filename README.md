@@ -21,28 +21,30 @@
 
 ## Installation
 * `You Installation Guide Here`
+* ng new shopee-cart
+* ng g c product-list-component
 
-## Create Simple Shopping Cart 
+## Create Simple Shopping Cart
 Please see the Attached `gif` for the Design
-* List all the Products 
-  * Product Name, 
-  * Description 
-  * Price of the Product
+* List all the Products
+    * Product Name,
+    * Description
+    * Price of the Product
 * On Each Product it should have "Add to Cart" button
 * When i click the "Add to Cart" button it should
-  * Add to Cart List
-  * Increment the quantity of each Product in the Cart List
-  * Increment the number of quantity in the header 
-* List all the Products that you added to the Carts 
-  * Product Name
-  * Description
-  * Price of the Product
-  * Quantity
+    * Add to Cart List
+    * Increment the quantity of each Product in the Cart List
+    * Increment the number of quantity in the header
+* List all the Products that you added to the Carts
+    * Product Name
+    * Description
+    * Price of the Product
+    * Quantity
 * On Each Product in the Cart it should have "Remove from Cart" button
-* When I click the "Remove from Cart" button it should 
-  * Decrement number of quantity of the Product
-  * Decrement the total number of quantity in the header
-  * When the quantity of each Product become "0" zero it will remove from list
+* When I click the "Remove from Cart" button it should
+    * Decrement number of quantity of the Product
+    * Decrement the total number of quantity in the header
+    * When the quantity of each Product become "0" zero it will remove from list
 
 
 ## Notes
