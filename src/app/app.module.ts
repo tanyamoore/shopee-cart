@@ -17,7 +17,7 @@ import ProductComponent from './components/product/product.component';
     CartComponent,
     HeaderComponent,
     ProductsListComponent,
-    ProductComponent
+    ProductComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,15 +8,14 @@ import IProduct from '../interfaces/interface'
   providedIn: 'root'
 })
 export default class CartService {
-  counterInfo$: Observable<number>;
-  productsInCart: IProduct[];
+  public counterInfo$: Observable<number>;
+  public productsInCart: IProduct[] = localStorage.productsInCart ? JSON.parse(localStorage.productsInCart) : [];
 
   constructor(private store: Store<{ count: number }>) {
     this.counterInfo$ = store.select('count');
-    this.productsInCart = localStorage.productsInCart ? JSON.parse(localStorage.productsInCart) : [];
   }
 
-  addToCart(product: IProduct) {
+  public addToCart(product: IProduct) {
     product.counter = product.counter ? product.counter + 1 : 1;
     if(this.productsInCart.findIndex((prod : IProduct) => prod.id === product.id) === -1) {
       this.productsInCart.push(product);
@@ -25,11 +24,11 @@ export default class CartService {
     this.store.dispatch(increment());
   }
 
-  getProducts() {
+  public getProducts() {
     return this.productsInCart;
   }
 
-  deleteProduct(product : IProduct)  {
+  public deleteProduct(product : IProduct)  {
     if(product.counter > 1) {
       product.counter --;
     } else {

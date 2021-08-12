@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { products } from '../../products';
 import CartService from '../../services/cart.service';
 import IProduct from '../../interfaces/interface'
@@ -9,12 +9,14 @@ import IProduct from '../../interfaces/interface'
   styleUrls: ['./products-list.component.scss']
 })
 
-export default class ProductsListComponent {
-  products: IProduct[];
-  addToCart: (product : IProduct) => void
+export default class ProductsListComponent implements OnInit{
+  public products: IProduct[] = [];
 
-  constructor(private cartService: CartService) {
+  constructor(private cartService: CartService) {}
+
+  ngOnInit(): void {
     this.products = products;
-    this.addToCart = (product: IProduct) =>  this.cartService.addToCart(product);
   }
+
+  addToCart = (product: IProduct) =>  this.cartService.addToCart(product);
 }
