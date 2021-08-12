@@ -29,9 +29,6 @@
 * Create html for product list in cart component which will render product component
 * Create html for product component depending on whether the product is in the cart or not
 * Create cart service with methods which can add new product in cart, remove product from cart, get all products in cart, and change products list in localstorage for each method
-* Create action for Ngrx store with to actions, increment and decrement, to save counter, which can shows how many products total in cart in header
-* Create reducer for Ngrx store which will update state for counter
-* In cart service get initial value of counter from store. and put dispatch method, which will call in addproduct - increment and deleteproduct - decrement
 
 ## Create Simple Shopping Cart
 Please see the Attached `gif` for the Design
