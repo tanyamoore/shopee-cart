@@ -20,9 +20,18 @@
 * create a Pull Request to this repository
 
 ## Installation
-* `You Installation Guide Here`
-* ng new shopee-cart
-* ng g c product-list-component
+* Create angular app (ng new shopee-cart)
+* Create components (ng g c product-list, ng g c product, ng g c cart, ng g c header)
+* Create service (ng g s cart)
+* Create file width products list
+* Create header component with to links, add routing to module, add redirect from main page to product list, create functional for changing tabs, and save result to localStorage
+* Create html product list component which will render product component
+* Create html for product list in cart component which will render product component
+* Create html for product component depending on whether the product is in the cart or not
+* Create cart service with methods which can add new product in cart, remove product from cart, get all products in cart, and change products list in localstorage for each method
+* Create action for Ngrx store with to actions, increment and decrement, to save counter, which can shows how many products total in cart in header
+* Create reducer for Ngrx store which will update state for counter
+* In cart service get initial value of counter from store. and put dispatch method, which will call in addproduct - increment and deleteproduct - decrement
 
 ## Create Simple Shopping Cart
 Please see the Attached `gif` for the Design

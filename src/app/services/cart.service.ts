@@ -1,19 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
-import { increment, decrement } from '../counter/actions';
+import { Observable, BehaviorSubject } from 'rxjs';
 import IProduct from '../interfaces/interface'
 
 @Injectable({
   providedIn: 'root'
 })
 export default class CartService {
-  public counterInfo$: Observable<number>;
+  counterSource = new BehaviorSubject<number>(localStorage.counter || 0);
+  counterInfo$: Observable<number> = this.counterSource.asObservable();
   public productsInCart: IProduct[] = localStorage.productsInCart ? JSON.parse(localStorage.productsInCart) : [];
-
-  constructor(private store: Store<{ count: number }>) {
-    this.counterInfo$ = store.select('count');
-  }
 
   public addToCart(product: IProduct) {
     product.counter = product.counter ? product.counter + 1 : 1;
@@ -21,7 +16,8 @@ export default class CartService {
       this.productsInCart.push(product);
     }
     localStorage.productsInCart = JSON.stringify(this.productsInCart)
-    this.store.dispatch(increment());
+    localStorage.counter = this.productsInCart.reduce((acc, prod) => acc +=prod.counter, 0)
+    this.counterSource.next(localStorage.counter);
   }
 
   public getProducts() {
@@ -36,6 +32,7 @@ export default class CartService {
       this.productsInCart.splice(indexToDelete,1)
     }
     localStorage.productsInCart = JSON.stringify(this.productsInCart)
-    this.store.dispatch(decrement());
+    localStorage.counter = this.productsInCart.reduce((acc, prod) => acc +=prod.counter, 0)
+    this.counterSource.next(localStorage.counter);
   }
 }

@@ -17,6 +17,4 @@ export default class ProductsListComponent implements OnInit{
   ngOnInit(): void {
     this.products = products;
   }
-
-  addToCart = (product: IProduct) =>  this.cartService.addToCart(product);
 }

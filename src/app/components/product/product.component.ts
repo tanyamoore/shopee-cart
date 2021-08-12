@@ -8,12 +8,16 @@ import CartService from '../../services/cart.service';
   styleUrls: ['./product.component.scss']
 })
 export default class ProductComponent {
-  @Input() product : any;
-  @Input() cart : any;
+  @Input() product : IProduct = {} as any;
+  @Input() cart : boolean = false;
 
   constructor(private cartService: CartService) {}
 
-  public addToCart = (product: IProduct) =>  this.cartService.addToCart(product);
+  public addToCart(product: IProduct) :void {
+    return this.cartService.addToCart(product);
+  }
 
-  public deleteProduct = (product: IProduct) =>  this.cartService.deleteProduct(product);
+  public deleteProduct(product: IProduct) :void {
+    return this.cartService.deleteProduct(product);
+  }
 }
