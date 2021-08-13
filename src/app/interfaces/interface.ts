@@ -4,4 +4,5 @@ export default interface IProduct {
   id: number
   description: string
   counter: number
+  total: number
 }

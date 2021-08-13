@@ -5,6 +5,7 @@ export const products = [
     id: 1,
     description: '',
     counter: 0,
+    total: 0,
   },
   {
     name: 'Harry Potter',
@@ -12,6 +13,7 @@ export const products = [
     id: 2,
     description: '',
     counter: 0,
+    total: 0,
   },
   {
     name: 'Used plastic bottle',
@@ -19,6 +21,7 @@ export const products = [
     id: 3,
     description: '',
     counter: 0,
+    total: 0,
   },
   {
     name: 'Half-dried plant',
@@ -26,5 +29,6 @@ export const products = [
     id: 4,
     description: '',
     counter: 0,
+    total: 0,
   },
 ];

@@ -10,11 +10,13 @@ import { Observable } from 'rxjs';
 export default class HeaderComponent implements OnInit {
   public activeTab: string = '';
   public productsCounter: Observable<number> | null = null;
+  public productsTotal: Observable<number> | null = null;
 
   constructor(private cartService: CartService) {}
 
   ngOnInit(): void {
     this.productsCounter = this.cartService.counterInfo$;
+    this.productsTotal = this.cartService.totalAmount$;
     this.activeTab = localStorage.activeTab || 'product';
   }
 
